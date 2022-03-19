@@ -15,9 +15,10 @@ const getFlagPackageJson = (country, aspectRatio) => `{
 const getFlagTypeScriptTypings = () => `
 import * as React from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLElement> {
-	title?: string;
-}
+// https://stackoverflow.com/questions/63165896/what-is-the-type-of-the-svg-element-in-typescript
+type HTMLSVGElement = HTMLElement & SVGElement;
+
+interface Props extends React.HTMLAttributes<HTMLSVGElement> {}
 
 // React TypeScript Cheatsheet doesn't recommend using React.FunctionalComponent.
 // https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/function_components
@@ -90,9 +91,10 @@ function generateTypeScriptTypings() {
 
 import * as React from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLElement> {
-	title?: string;
-}
+// https://stackoverflow.com/questions/63165896/what-is-the-type-of-the-svg-element-in-typescript
+type HTMLSVGElement = HTMLElement & SVGElement;
+
+interface Props extends React.HTMLAttributes<HTMLSVGElement> {}
 
 // React TypeScript Cheatsheet doesn't recommend using React.FunctionalComponent.
 // https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/function_components
