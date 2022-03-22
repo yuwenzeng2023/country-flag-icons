@@ -3,7 +3,7 @@ import * as React from 'react';
 // https://stackoverflow.com/questions/63165896/what-is-the-type-of-the-svg-element-in-typescript
 // https://microsoft.github.io/PowerBI-JavaScript/interfaces/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.htmlelement.html
 // https://microsoft.github.io/PowerBI-JavaScript/interfaces/_node_modules_typedoc_node_modules_typescript_lib_lib_dom_d_.svgelement.html
-interface HTMLSVGElement extends HTMLElement, SVGElement {}
+type HTMLSVGElement = HTMLElement & SVGElement;
 
 // https://use-form.netlify.app/interfaces/_node_modules__types_react_index_d_.react.htmlattributes.html
 // https://use-form.netlify.app/interfaces/_node_modules__types_react_index_d_.react.svgattributes.html
