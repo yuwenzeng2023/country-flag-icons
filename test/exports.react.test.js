@@ -1,6 +1,6 @@
 import FLAGS, { RU } from '../react/3x2/index.js'
 
-const Library = require('../react/3x2/index.commonjs.js')
+import Library from '../react/3x2/index.cjs'
 
 describe('exports/react/3x2', () => {
 	it('should export ES6', () => {

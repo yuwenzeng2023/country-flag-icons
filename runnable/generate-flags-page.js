@@ -79,7 +79,7 @@ function generateHTML(aspectRatioWidth, aspectRatioHeight) {
 		</html>
 	`
 
-	fs.outputFileSync(path.join(__dirname, `../website/${aspectRatioWidth}x${aspectRatioHeight}/index.html`), html)
+	fs.outputFileSync(path.resolve(`./website/${aspectRatioWidth}x${aspectRatioHeight}/index.html`), html)
 }
 
 generateHTML(3, 2)

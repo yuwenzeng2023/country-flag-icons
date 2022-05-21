@@ -3,7 +3,7 @@ import {
 	countries
 } from '../index.js'
 
-const Library = require('../index.commonjs.js')
+import Library from '../index.cjs'
 
 describe('exports/core', () => {
 	it('should export ES6', () => {
