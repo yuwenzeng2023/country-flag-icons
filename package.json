@@ -31,6 +31,11 @@
       "import": "./string/3x2/index.js",
       "require": "./string/3x2/index.cjs"
     },
+    "./unicode": {
+      "types": "./unicode/index.d.ts",
+      "import": "./unicode/index.js",
+      "require": "./unicode/index.cjs"
+    },
     "./1x1/flags.css": "./1x1/flags.css",
     "./3x2/flags.css": "./3x2/flags.css",
     "./package.json": "./package.json",
