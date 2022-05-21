@@ -1,1 +1,1 @@
-module.exports = require('../commonjs/unicode')
+module.exports = require('../commonjs/unicode.js')

@@ -7,7 +7,6 @@ import COUNTRIES from '../source/countries.json'
 const getFlagPackageJson = (country, aspectRatio) => `{
   "private": true,
   "name": "country-flag-icons/react/${aspectRatio}/${country}",
-  "version": "1.0.0",
   "main": "index.commonjs.js",
   "module": "index.js"
 }`
@@ -34,8 +33,8 @@ export default Flag;
 // const getFlagIndex = (country) => `export { ${country} as default } from '../../../modules/react/${aspectRatio}/${country}'`
 // const getFlagIndexCommonJs = (country) => `exports = module.exports = require('../../../commonjs/react/${aspectRatio}/${country}').${country}`
 
-const getFlagIndex = (country) => `export { ${country} as default } from '../index'`
-const getFlagIndexCommonJs = (country) => `exports = module.exports = require('../index.commonjs').${country}`
+const getFlagIndex = (country) => `export { ${country} as default } from '../index.js'`
+const getFlagIndexCommonJs = (country) => `exports = module.exports = require('../index.commonjs.js').${country}`
 
 fs.outputFileSync(path.join(__dirname, '../source/react/3x2/index.js'), generateFlags('3x2'))
 
@@ -70,7 +69,7 @@ function generateIndex(aspectRatio) {
 export {
 ${COUNTRIES.map((country) => '\t' + country + ',').join('\n')}
 	default as default
-} from '../../modules/react/${aspectRatio}'
+} from '../../modules/react/${aspectRatio}/index.js'
 	`.trim()
 }
 
@@ -80,7 +79,7 @@ function generateIndexCommonJS(aspectRatio) {
 
 exports = module.exports = {}
 
-var flags = require('../../commonjs/react/${aspectRatio}')
+var flags = require('../../commonjs/react/${aspectRatio}/index.js')
 
 ${COUNTRIES.map((country) => 'exports.' + country + ' = flags.' + country + ';').join('\n')}
 	`.trim()

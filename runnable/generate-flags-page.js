@@ -1,5 +1,6 @@
 import path from 'path'
 import fs from 'fs-extra'
+
 import COUNTRIES from '../source/countries.json'
 import countryNames from './countryNames.json'
 

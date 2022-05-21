@@ -16,7 +16,7 @@ import COUNTRIES from '../source/countries.json'
 
   fs.outputFileSync(
     path.join(outputDirectory, 'index.js'),
-    COUNTRIES.map(country => `export { default as ${country} } from './${country}'`).join('\n')
+    COUNTRIES.map(country => `export { default as ${country} } from './${country}.js'`).join('\n')
   )
 
   fs.outputFileSync(
